@@ -31,6 +31,9 @@ st.title('Tablero avanzado, inteligente y famoso entre tableros')
 st.text("Una maquina va a interpretar el boceto que hagas, con ayuda de una API key que por alguna razón si funciona siempre con esta aplicación en especifico, pero no con las otras")
 st.subheader("Dibuja el boceto en el panel  y presiona el botón para analizarla")
 
+color = st.color_picker("Elige un color para tu stroke", "#000000")
+st.write("el color escogido es", color)
+
 # Add canvas component
 #bg_image = st.sidebar.file_uploader("Cargar Imagen:", type=["png", "jpg"])
 # Specify canvas parameters in application
@@ -38,7 +41,7 @@ drawing_mode = "freedraw"
 stroke_width = st.slider('Selecciona el ancho de línea', 1, 30, 5)
 #stroke_color = '#FFFFFF' # Set background color to white
 #bg_color = '#000000'
-stroke_color = "#000000" 
+stroke_color = "color" 
 bg_color = '#FFFFFF'
 #realtime_update = st.sidebar.checkbox("Update in realtime", True)
 
@@ -47,7 +50,7 @@ bg_color = '#FFFFFF'
 canvas_result = st_canvas(
     fill_color="rgba(255, 165, 0, 0.3)",  # Fixed fill color with some opacity
     stroke_width=stroke_width,
-    stroke_color=stroke_color,
+    stroke_color=color,
     background_color=bg_color,
     height=300,
     width=400,
