@@ -85,7 +85,7 @@ if canvas_result.image_data is not None and api_key and analyze_button:
  
         base64_image = encode_image_to_base64("img.png")
             
-        prompt_text = (f"Describe in spanish briefly the image")
+        prompt_text = (f"Describe in spanish the image in a sophisticated way, as if you were an art critic")
     
       # Create the payload for the completion request
         messages = [
