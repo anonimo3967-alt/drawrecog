@@ -59,7 +59,7 @@ canvas_result = st_canvas(
     key="canvas",
 )
 
-ke = st.text_input('Ingresa tu Clave')
+ke = st.text_input('Ingresa tu Clave, que si funciona')
 #os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 os.environ['OPENAI_API_KEY'] = ke
 
@@ -75,7 +75,7 @@ analyze_button = st.button("Analiza la imagen", type="secondary")
 # Check if an image has been uploaded, if the API key is available, and if the button has been pressed
 if canvas_result.image_data is not None and api_key and analyze_button:
 
-    with st.spinner("Analizando ..."):
+    with st.spinner("Descomponiendo tu imagen para analizar los más sofisticados y reconditos detalles..."):
         # Encode the image
         input_numpy_array = np.array(canvas_result.image_data)
         input_image = Image.fromarray(input_numpy_array.astype('uint8'),'RGBA')
