@@ -26,10 +26,9 @@ def encode_image_to_base64(image_path):
 
 # Streamlit 
 st.set_page_config(page_title='Tablero Inteligente')
-st.title('Tablero Inteligente')
-with st.sidebar:
-    st.subheader("Acerca de:")
-    st.subheader("En esta aplicación veremos la capacidad que ahora tiene una máquina de interpretar un boceto")
+st.title('Tablero avanzado, inteligente y famoso entre tableros')
+
+st.subheader("Una maquina va a interpretar el boceto que hagas, con ayuda de una API key que por alguna razón si funciona siempre con esta aplicación en especifico, pero no con las otras")
 st.subheader("Dibuja el boceto en el panel  y presiona el botón para analizarla")
 
 # Add canvas component
